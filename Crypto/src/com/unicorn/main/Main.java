@@ -30,12 +30,6 @@ public class Main {
 			System.out.println("decryptResult:"+decryptResult);
 			
 			
-			String encryptResult2=DES.encryptDES2(text, key);
-			String decryptResult2=DES.decryptDES2(encryptResult2, key);
-			
-			System.out.println("encryptResult2:"+encryptResult2);
-			System.out.println("decryptResult2:"+decryptResult2);
-			
 		} catch (InvalidKeyException e) {
 			e.printStackTrace();
 		} catch (NoSuchAlgorithmException e) {
