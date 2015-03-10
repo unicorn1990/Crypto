@@ -23,8 +23,8 @@ public class Main {
 		
 		
 		try {
-			String encryptResult=DES.encryptDES(text, key);
-			String decryptResult=DES.decryptDES(encryptResult, key);
+			String encryptResult=DES.encrypt(text, key);
+			String decryptResult=DES.decrypt(encryptResult, key);
 			
 			System.out.println("encryptResult:"+encryptResult);
 			System.out.println("decryptResult:"+decryptResult);
