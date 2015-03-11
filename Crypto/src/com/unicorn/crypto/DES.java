@@ -1,4 +1,4 @@
-package com.unicorn.des;
+package com.unicorn.crypto;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -17,7 +17,11 @@ import javax.crypto.spec.IvParameterSpec;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
-
+/**
+ * DES工具类
+ * @author unicorn
+ * @version @2015年3月10日下午3:45:05
+ */
 public class DES {
 
 	// 初始化向量，必须八位
@@ -86,6 +90,7 @@ public class DES {
 		IvParameterSpec zeroIv = new IvParameterSpec(iv);
 		// 实例化DESKeySpec类，根据字节数组前8位来构造DESKeySpec
 		DESKeySpec keySpec = new DESKeySpec(decryptKey.getBytes());
+		
 		// 用密匙工厂获取DES密匙工厂实例，并根据keySpec生成secretKey
 		SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(DES);
 		SecretKey secretKey = keyFactory.generateSecret(keySpec);
