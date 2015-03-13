@@ -2,6 +2,7 @@ package com.unicorn.main;
 
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Observable;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
@@ -16,13 +17,12 @@ public class MainAES {
 	public static void main(String[] args) {
 		
 		
-		
 		try {
 			String encryptResult=AES.encrypt( key,text);
 			String decryptResult=AES.decrypt( key,encryptResult);
 			
-			System.out.println("encryptResult:"+encryptResult);
-			System.out.println("decryptResult:"+decryptResult);
+			System.out.println("encryptResult:"+encryptResult+" length:"+encryptResult.length());
+			System.out.println("decryptResult:"+decryptResult+" length:"+decryptResult.length());
 		} catch (InvalidKeyException e) {
 			e.printStackTrace();
 		} catch (NoSuchAlgorithmException e) {

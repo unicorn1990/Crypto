@@ -116,6 +116,9 @@ public class AES {
 
 		// 得到 加密数据
 		byte[] encrypted = cipher.doFinal(clear);
+		
+//		System.out.println("clear length:"+clear.length);
+//		System.out.println("encrypted length:"+encrypted.length);
 		return encrypted;
 	}
 
